@@ -19,7 +19,7 @@ train = np.zeros((n_train, n_frames, n_channels, *frame_size)) #(num_videos, num
 
 for i in range(n_train):
     for j in range(22):
-        dir = f'squashfs-root/dataset/train/video_{i}/image_{j}.png'
+        dir = f'../squashfs-root/dataset/train/video_{i}/image_{j}.png'
         img = iio.imread(dir)
         train[i][j] = img
 
