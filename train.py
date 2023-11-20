@@ -15,7 +15,7 @@ frame_size = (160, 240)
 n_frames = 22
 n_train = 1000
 
-train = np.zeros((n_train, n_frames, n_channels, *frame_size)) #(num_videos, num_frames,height, width, channels)
+train = np.zeros((n_train, n_frames, *frame_size, n_channels)) #(num_videos, num_frames,height, width, channels)
 
 print('Loading train data...')
 for i in range(n_train):
