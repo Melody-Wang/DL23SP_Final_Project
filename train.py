@@ -41,6 +41,7 @@ train_loader = DataLoader(train, shuffle=True,
                         batch_size=16, collate_fn=collate)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(device)
 model = Seq2Seq(num_channels=3, num_kernels=64, 
 kernel_size=(3, 3), padding=(1, 1), activation="relu", 
 frame_size=(160, 240), num_layers=3).to(device)
