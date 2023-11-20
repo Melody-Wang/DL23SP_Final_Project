@@ -17,11 +17,13 @@ n_train = 1000
 
 train = np.zeros((n_train, n_frames, n_channels, *frame_size)) #(num_videos, num_frames,height, width, channels)
 
+print('Loading train data...')
 for i in range(n_train):
     for j in range(22):
         dir = f'../squashfs-root/dataset/train/video_{i}/image_{j}.png'
         img = iio.imread(dir)
         train[i][j] = img
+print('train data loaded')
 
 train = train.reshape(n_train, n_channels, n_frames, *frame_size)
 
