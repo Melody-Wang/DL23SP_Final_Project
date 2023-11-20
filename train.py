@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from Seq2Seq import Seq2Seq
 from torch.utils.data import DataLoader
 
-data_dir = '/content/drive/MyDrive/Dataset_Student_V2.zip'
+data_dir = 'squashfs-root/dataset/'
 os.system(data_dir)
 
 n_channels = 3
@@ -19,7 +19,7 @@ train = np.zeros((n_train, n_frames, n_channels, *frame_size)) #(num_videos, num
 
 for i in range(n_train):
     for j in range(22):
-        dir = f'/content/Dataset_Student/train/video_{i}/image_{j}.png'
+        dir = f'squashfs-root/dataset/train/video_{i}/image_{j}.png'
         img = iio.imread(dir)
         train[i][j] = img
 
